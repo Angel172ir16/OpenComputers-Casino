@@ -18,7 +18,8 @@ local GAMES = {
     { "Minesweeper", "game_Minesweeper" },
     { "Roulette", "game_Roulette" },
     { "Black Jack", "game_Black_jack" },
-    { "More less", "game_More_less" }
+    { "More less", "game_More_less" },
+    { "Labyrinth", "game_Labyrinth" }
 }
 
 local MODES = {
