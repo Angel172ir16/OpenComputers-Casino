@@ -58,7 +58,7 @@ function drawDisplayForOneHand()
   gpu.setBackground(0x20B2AA)
   gpu.set(17,10,' Больше ')
 
-  gpu.set(17,13,' Менше  ')
+  gpu.set(17,13,' Меньше  ')
 
   gpu.set(13,6," Забрать ставку ")
   gpu.setBackground(0x00aa00)
@@ -162,7 +162,7 @@ function drawDisplay()
 	gpu.setForeground(0x000000)
 	gpu.setBackground(0xffffff)
 
-	gpu.set(5, 11, 'Blackjack')
+	gpu.set(5, 11, 'MoreLess')
    	 gpu.set(5, 13, 'Правила:')
    	 gpu.set(5, 14, '1. Нужно угадать какая ,')
    	 gpu.set(5, 15, 'карта следуйщая.')
