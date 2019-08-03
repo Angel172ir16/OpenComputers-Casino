@@ -162,6 +162,14 @@ function drawDisplay()
 	gpu.setForeground(0x000000)
 	gpu.setBackground(0xffffff)
 
+	gpu.set(5, 11, 'Blackjack')
+   	 gpu.set(5, 13, 'Правила:')
+   	 gpu.set(5, 14, '1. Нужно угадать какая ,')
+   	 gpu.set(5, 15, 'карта следуйщая.')
+   	 gpu.set(5, 16, '2. При однаковых картах.')
+   	 gpu.set(5, 17, 'победа игрока.')
+   	 gpu.set(5, 18, '3. Игрок выигрует только')
+  	  gpu.set(5, 19, 'забравшы ставку".')
 	gpu.set(21,3,'Выберите ставку')
 
 end
