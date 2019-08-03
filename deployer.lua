@@ -11,13 +11,14 @@ os.sleep(4)
 require("shell").execute("/home/1")]]
 
 local GAMES = {
-    { "Terminal (PIM)", "app_Terminal.0" },
+    { "Terminal (PIM)", "app_Terminal" },
     { "Terminal (Chest)", "app_Terminal_2.0" },
     { "Checker", "app_Checker" },
     { "Video Poker", "game_video_poker" },
     { "Minesweeper", "game_Minesweeper" },
     { "Roulette", "game_Roulette" },
-    { "Black Jack", "game_Black_jack" }
+    { "Black Jack", "game_Black_jack" },
+    { "More less", "game_More_less" }
 }
 
 local MODES = {
@@ -92,14 +93,14 @@ end
 
 local function saveLauncher()
     print("Launcher saving begins...")
-    shell.execute("wget -fq https://raw.githubusercontent.com/krovyaka/OpenComputers-Casino/" .. SETTINGS.branch .. "/launcher.lua /home/1")
+    shell.execute("wget -fq https://raw.githubusercontent.com/lfreew1ndl/OpenComputers-Casino/" .. SETTINGS.branch .. "/launcher.lua /home/1")
     print("Launcher is saved")
 end
 
 local function saveApplication()
     print("Application saving begins...")
     shell.execute(string.format(
-            "wget -fq https://raw.githubusercontent.com/krovyaka/OpenComputers-Casino/%s/apps/%s.lua /home/app.lua",
+            "wget -fq https://raw.githubusercontent.com/lfreew1ndl/OpenComputers-Casino/%s/apps/%s.lua /home/app.lua",
             SETTINGS.branch,
             SETTINGS.application
     ))
