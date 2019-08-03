@@ -2,7 +2,7 @@ local gpu = require("component").gpu
 local computer = require("computer")
 local term = require("term")
 event = require("event")
-local admins = { "Durex77", "krovyaka", "krovyak", "GoodGame", "GooodGame", "SkyDrive_" }
+local admins = { "Durex77", "krovyaka", "krovyak", "SkyDrive_" }
 local shell = require("shell")
 
 if not require("filesystem").exists("/lib/durexdb.lua") then
@@ -10,7 +10,7 @@ if not require("filesystem").exists("/lib/durexdb.lua") then
         io.stderr:write("Для первого запуска необходима Интернет карта!")
         return
     else
-        shell.execute("wget -q https://pastebin.com/raw/bK7wx8wB /lib/durexdb.lua")
+        shell.execute("wget -q https://raw.githubusercontent.com/lfreew1ndl/OpenComputers-Casino/master/durexDB.lua"")
     end
 end
 
@@ -22,7 +22,7 @@ end
 
 function updateFromGitHub()
     local app = loadfile("/home/appInfo.lua")()
-    shell.execute("wget -fq https://raw.githubusercontent.com/krovyaka/OpenComputers-Casino/" .. app.branch .. "/apps/" .. app.name .. ".lua /home/app.lua")
+        shell.execute("wget -fq https://raw.githubusercontent.com/lfreew1ndl/OpenComputers-Casino/" .. app.branch .. "/apps/" .. app.name .. ".lua /home/app.lua")
 end
 
 local function hideToken(s)
