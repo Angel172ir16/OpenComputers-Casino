@@ -81,6 +81,7 @@ event.shouldInterrupt = function()
     return false
 end
 
+require("process").info().data.signal = function() end
 require("durexdb")
 io.write("Токен-код (скрыт): ")
 gpu.setForeground(0x000000)
