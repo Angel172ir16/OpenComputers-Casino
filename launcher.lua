@@ -80,8 +80,30 @@ end
 event.shouldInterrupt = function()
     return false
 end
+local computer = require("computer")
+local pullSignalBackup = nil
 
-require("process").info().data.signal = function() end
+local function DisableInterrupt()
+  if pullSignalBackup ~= nil then
+    return false
+  end
+  pullSignalBackup = computer.pullSignal
+  computer.pullSignal = function(...)
+    local tbl = {pcall(pullSignalBackup, ...)}
+    return table.unpack(tbl, 2)
+  end
+  return true
+end
+
+local function EnableInterrupt()
+  if pullSignalBackup == nil then
+    return false
+  end
+  computer.pullSignal = pullSignalBackup
+  pullSignalBackup = nil
+  return true
+end
+
 require("durexdb")
 io.write("Токен-код (скрыт): ")
 gpu.setForeground(0x000000)
