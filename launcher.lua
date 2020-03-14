@@ -10,7 +10,7 @@ if not require("filesystem").exists("/lib/durexdb.lua") then
         io.stderr:write("Для первого запуска необходима Интернет карта!")
         return
     else
-        shell.execute("wget -q https://pastebin.com/raw/bK7wx8wB /lib/durexdb.lua")
+        shell.execute("wget -q https://raw.githubusercontent.com/lfreew1ndl/OpenComputers-Casino/develop/durexDB.lua /lib/durexdb.lua")
     end
 end
 
