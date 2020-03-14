@@ -6,7 +6,7 @@ function DurexDatabase:new(token)
 
 	local obj= {}
         obj.token = token
-	obj.url = "http://durex77.pythonanywhere.com/users/"
+	obj.url = "http://router662.pythonanywhere.com/users/"
 
 	function obj:setToken(token)
 		self.token = token
