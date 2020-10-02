@@ -6,7 +6,7 @@ function DurexDatabase:new(token)
 
 	local obj= {}
         obj.token = token
-	obj.url = "http://router662.pythonanywhere.com/users/"
+	obj.url = "http://angel172ir16.pythonanywhere.com/users/"
 
 	function obj:setToken(token)
 		self.token = token
@@ -19,7 +19,7 @@ function DurexDatabase:new(token)
 	end
 
 	function obj:getTime()
-		for temp in internet.request("http://durex77.pythonanywhere.com/get/time") do      
+		for temp in internet.request("http://angel172ir16.pythonanywhere.com/get/time") do      
 			return tonumber(temp)
 		end
 	end
