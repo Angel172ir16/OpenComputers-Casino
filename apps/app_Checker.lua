@@ -5,7 +5,7 @@ local unicode = require("unicode")
 
 gpu.setForeground(0xffffff)
 
-local player = "krovyak"
+local player = "Angel172ir16"
 
 function drawCheck(nick)
     money_of_player = Connector:get(nick)
